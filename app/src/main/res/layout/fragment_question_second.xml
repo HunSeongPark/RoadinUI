@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_q_second">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_cancel"
+        app:layout_constraintBottom_toBottomOf="@id/backBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backBtn" />
+
+    <TextView
+        android:id="@+id/topTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="지금 당신은 무슨"
+        android:textColor="#1E1915"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/bottomTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/bottomTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="옷을 입으셨나요?"
+        android:textColor="#1E1915"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/topTv"
+        app:layout_constraintTop_toBottomOf="@id/topTv" />
+
+    <ImageView
+        android:id="@+id/firstAnswer"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/shape_answer"
+        app:layout_constraintBottom_toTopOf="@id/thirdAnswer"
+        app:layout_constraintEnd_toStartOf="@id/secondAnswer"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomTv"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/car30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:src="@drawable/shoes_casual"
+        app:layout_constraintBottom_toBottomOf="@id/firstAnswer"
+        app:layout_constraintStart_toStartOf="@id/firstAnswer"
+        app:layout_constraintTop_toTopOf="@id/firstAnswer" />
+
+    <TextView
+        android:id="@+id/firstTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.05"
+        android:text="캐주얼"
+        android:textColor="#1E1915"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/firstAnswer"
+        app:layout_constraintEnd_toEndOf="@id/firstAnswer"
+        app:layout_constraintStart_toEndOf="@id/car30"
+        app:layout_constraintTop_toTopOf="@id/firstAnswer" />
+
+    <ImageView
+        android:id="@+id/secondAnswer"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:src="@drawable/shape_answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/firstAnswer"
+        app:layout_constraintTop_toTopOf="@id/firstAnswer" />
+
+    <ImageView
+        android:id="@+id/car60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:src="@drawable/shoes_running"
+        app:layout_constraintBottom_toBottomOf="@id/secondAnswer"
+        app:layout_constraintStart_toStartOf="@id/secondAnswer"
+        app:layout_constraintTop_toTopOf="@id/secondAnswer" />
+
+    <TextView
+        android:id="@+id/secondTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.05"
+        android:text="운동화"
+        android:textColor="#1E1915"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/secondAnswer"
+        app:layout_constraintEnd_toEndOf="@id/secondAnswer"
+        app:layout_constraintStart_toEndOf="@id/car60"
+        app:layout_constraintTop_toTopOf="@id/secondAnswer" />
+
+    <ImageView
+        android:id="@+id/thirdAnswer"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/shape_answer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/firstAnswer"
+        app:layout_constraintStart_toStartOf="@id/firstAnswer"
+        app:layout_constraintTop_toBottomOf="@id/firstAnswer" />
+
+    <ImageView
+        android:id="@+id/car120"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:src="@drawable/shoes_normal"
+        app:layout_constraintBottom_toBottomOf="@id/thirdAnswer"
+        app:layout_constraintStart_toStartOf="@id/thirdAnswer"
+        app:layout_constraintTop_toTopOf="@id/thirdAnswer" />
+
+    <TextView
+        android:id="@+id/thirdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.05"
+        android:text="단화"
+        android:textColor="#1E1915"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/thirdAnswer"
+        app:layout_constraintEnd_toEndOf="@id/thirdAnswer"
+        app:layout_constraintStart_toEndOf="@id/car120"
+        app:layout_constraintTop_toTopOf="@id/thirdAnswer" />
+
+    <ImageView
+        android:id="@+id/fourthAnswer"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:src="@drawable/shape_answer"
+        app:layout_constraintBottom_toBottomOf="@id/thirdAnswer"
+        app:layout_constraintEnd_toEndOf="@id/secondAnswer"
+        app:layout_constraintStart_toStartOf="@id/secondAnswer"
+        app:layout_constraintTop_toTopOf="@id/thirdAnswer" />
+
+    <ImageView
+        android:id="@+id/carNone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:src="@drawable/shoes_girl"
+        app:layout_constraintBottom_toBottomOf="@id/fourthAnswer"
+        app:layout_constraintStart_toStartOf="@id/fourthAnswer"
+        app:layout_constraintTop_toTopOf="@id/fourthAnswer" />
+
+    <TextView
+        android:id="@+id/fourthTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.05"
+        android:text="구두"
+        android:textColor="#1E1915"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/fourthAnswer"
+        app:layout_constraintEnd_toEndOf="@id/fourthAnswer"
+        app:layout_constraintStart_toEndOf="@id/carNone"
+        app:layout_constraintTop_toTopOf="@id/fourthAnswer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

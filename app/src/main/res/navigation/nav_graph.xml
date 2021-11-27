@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/menu_test"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/menu_test"
+        android:name="hunseong.com.roadinui.screen.test.TestFragment"
+        android:label="menu_test"
+        tools:layout="@layout/fragment_test">
+
+        <action
+            android:id="@+id/menu_test_to_test_question"
+            app:destination="@id/first_question_fragment"
+            app:popEnterAnim="@anim/pop_enter_alpha"
+            app:popExitAnim="@anim/pop_exit_alpha"
+            app:enterAnim="@anim/enter_alpha"
+            app:exitAnim="@anim/exit_alpha"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/menu_theme"
+        android:name="hunseong.com.roadinui.screen.theme.ThemeFragment"
+        android:label="menu_theme"
+        tools:layout="@layout/fragment_theme"/>
+    <fragment
+        android:id="@+id/menu_empty"
+        android:name="hunseong.com.roadinui.screen.empty.EmptyFragment"
+        android:label="menu_empty"
+        tools:layout="@layout/fragment_empty"/>
+    <fragment
+        android:id="@+id/menu_my"
+        android:name="hunseong.com.roadinui.screen.my.MyFragment"
+        android:label="menu_my"
+        tools:layout="@layout/fragment_my"/>
+
+    <fragment
+        android:id="@+id/first_question_fragment"
+        android:name="hunseong.com.roadinui.screen.test.question.QuestionFirstFragment"
+        android:label="first_question_fragment"
+        tools:layout="@layout/fragment_question_first">
+
+        <action
+            android:id="@+id/question_first_to_main"
+            app:destination="@id/menu_test"
+            app:popEnterAnim="@anim/pop_enter_alpha"
+            app:popExitAnim="@anim/pop_exit_alpha"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/enter_alpha"
+            app:exitAnim="@anim/exit_alpha"/>
+
+        <action
+            android:id="@+id/question_first_to_second"
+            app:destination="@id/second_question_fragment"
+            app:popEnterAnim="@anim/pop_enter_alpha"
+            app:popExitAnim="@anim/pop_exit_alpha"
+            app:enterAnim="@anim/enter_alpha"
+            app:exitAnim="@anim/exit_alpha"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/second_question_fragment"
+        android:name="hunseong.com.roadinui.screen.test.question.QuestionSecondFragment"
+        android:label="second_question_fragment"
+        tools:layout="@layout/fragment_question_second">
+
+        <action
+            android:id="@+id/question_second_to_main"
+            app:destination="@id/menu_test"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"
+            app:popEnterAnim="@anim/pop_enter_alpha"
+            app:popExitAnim="@anim/pop_exit_alpha"
+            app:enterAnim="@anim/enter_alpha"
+            app:exitAnim="@anim/exit_alpha"/>
+
+        <action
+            android:id="@+id/question_second_to_third"
+            app:destination="@id/third_question_fragment"
+            app:popEnterAnim="@anim/pop_enter_alpha"
+            app:popExitAnim="@anim/pop_exit_alpha"
+            app:enterAnim="@anim/enter_alpha"
+            app:exitAnim="@anim/exit_alpha"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/third_question_fragment"
+        android:name="hunseong.com.roadinui.screen.test.question.QuestionThirdFragment"
+        android:label="third_question_fragment"
+        tools:layout="@layout/fragment_question_third">
+
+        <action
+            android:id="@+id/question_third_to_main"
+            app:destination="@id/menu_test"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"
+            app:popEnterAnim="@anim/pop_enter_alpha"
+            app:popExitAnim="@anim/pop_exit_alpha"
+            app:enterAnim="@anim/enter_alpha"
+            app:exitAnim="@anim/exit_alpha"/>
+
+        <action
+            android:id="@+id/question_third_to_fourth"
+            app:destination="@id/fourth_question_fragment"
+            app:popEnterAnim="@anim/pop_enter_alpha"
+            app:popExitAnim="@anim/pop_exit_alpha"
+            app:enterAnim="@anim/enter_alpha"
+            app:exitAnim="@anim/exit_alpha"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fourth_question_fragment"
+        android:name="hunseong.com.roadinui.screen.test.question.QuestionFourthFragment"
+        android:label="fourth_question_fragment"
+        tools:layout="@layout/fragment_question_fourth">
+
+        <action
+            android:id="@+id/question_fourth_to_main"
+            app:destination="@id/menu_test"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"
+            app:popEnterAnim="@anim/pop_enter_alpha"
+            app:popExitAnim="@anim/pop_exit_alpha"
+            app:enterAnim="@anim/enter_alpha"
+            app:exitAnim="@anim/exit_alpha"/>
+
+        <action
+            android:id="@+id/question_fourth_to_result"
+            app:destination="@id/result_fragment"
+            app:popEnterAnim="@anim/pop_enter_alpha"
+            app:popExitAnim="@anim/pop_exit_alpha"
+            app:enterAnim="@anim/enter_alpha"
+            app:exitAnim="@anim/exit_alpha"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/result_fragment"
+        android:name="hunseong.com.roadinui.screen.test.ResultFragment"
+        android:label="result_fragment"
+        tools:layout="@layout/fragment_result">
+
+        <action
+            android:id="@+id/result_to_main"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"
+            app:destination="@id/menu_test"
+            app:popEnterAnim="@anim/pop_enter_alpha"
+            app:popExitAnim="@anim/pop_exit_alpha"
+            app:enterAnim="@anim/enter_alpha"
+            app:exitAnim="@anim/exit_alpha"/>
+
+
+    </fragment>
+
+</navigation>

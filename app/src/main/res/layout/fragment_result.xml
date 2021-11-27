@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#e5e5e5"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/result_exam"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/placeIv"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:0.9"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="북악스카이웨이"
+        app:layout_constraintTop_toBottomOf="@id/placeIv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:textSize="27dp"
+        android:textColor="#1e1915"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="구불구불 도로의 끝에 도착하면\n하늘의 별과 땅의 별이 합쳐진 별들의 축제가 열립니다"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        android:textColor="#1e1915"
+        android:textSize="11.5sp"
+        android:id="@+id/description"
+        android:letterSpacing="-0.03"
+        android:layout_marginTop="4dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shareBtn"
+        android:src="@drawable/ic_share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="@id/description"
+        android:layout_marginEnd="30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
